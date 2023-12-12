@@ -15,10 +15,11 @@ void calcWaitingTime(int a, int bt[a], int at[a]){
 
     wt[0] = 0;
     tt[0] = bt[0];
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < a; i++) {
         wt[i] = bt[i - 1] + wt[i - 1];
         tt[i] = wt[i] + bt[i];
         printf("%d %d", wt[i], tt[i]);
+}
 }
 
 void main(){
